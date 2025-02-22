@@ -1,9 +1,11 @@
 <template>
     <div>
-        <h2 class="text-center"> Workers</h2>
-        <v-card v-for="(queue) of queues" :key="queue.key"  @click="getQueue(queue.key)" class="container">
-            <v-card-title>{{ queue.name }}</v-card-title>
-        </v-card>
+        <h2 class="text-center"> List of Workers</h2>
+        <div class="d-flex flex-column align-center pt-4 pb-4" style="gap:1rem">
+            <v-card v-for="(queue) of queues" :key="queue.key"  @click="getQueue(queue.key)" class="container" elevation="0">
+                <v-card-title>{{ queue.name }}</v-card-title>
+            </v-card>
+        </div>
     </div>
 </template>
 
@@ -61,6 +63,8 @@ export default defineComponent({
     padding: 1rem;
     cursor: pointer;
     text-align: center;
-    border: 1px solid;
+    border: 1px solid !important;
+    width: fit-content;
+    background: rgb(180, 189, 247) !important;
 }
 </style>
