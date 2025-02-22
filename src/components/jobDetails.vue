@@ -92,7 +92,6 @@ export default defineComponent({
     async getAllJobs() {
       let name = this.$route.params.name;
       let status = this.$route.params.status;
-      console.log(name);
       try {
         let query = await axios({
           method: "post",
@@ -111,7 +110,6 @@ export default defineComponent({
         this.jobs = query.data.data;
         if (this.currentPage < this.page)
           this.lastEvaluatedKeys[(this.currentPage + 1).toString()] = query.data.lastEvaluatedKey;
-        console.log(items);
       } catch (er) {
         console.log(er);
       }

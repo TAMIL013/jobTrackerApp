@@ -44,7 +44,6 @@ export default defineComponent({
                    method: 'get',
                    url: 'http://localhost:3000/getAllQueues',
                });
-               console.log(query.data?.queues)
                for(let key of query.data.queues){
                     this.queues.push({
                         key:key,

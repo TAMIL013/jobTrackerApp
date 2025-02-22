@@ -158,7 +158,6 @@ export default defineComponent({
         },
         async getAllStatus(){
             let name=this.$route.params.name
-            console.log(name)
            try{
                let query= await axios({
                    method: 'post',
@@ -180,7 +179,6 @@ export default defineComponent({
                         }
                     }
                }
-               console.log(this.status)
            }catch(er){
             console.log(er)
            }
